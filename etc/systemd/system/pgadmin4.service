@@ -1,0 +1,13 @@
+[Unit]
+Description=PG Admin4 Service
+After=network.target
+
+[Service]
+Type=simple
+User=$USER
+WorkingDirectory=$CWD
+ExecStart=$CWD/manage.sh start
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
